@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nys.musicsystem.dao.UserDao">
+ <insert id="insert" useGeneratedKeys="true" keyProperty="user_id"> 
+	 insert into user(user_id , user_name , user_password , user_token , user_head ) 
+ 	 values(#{user_id} , #{user_name} , #{user_password} , #{user_token} , #{user_head} )
+</insert>
+
+<delete id="deleteById">
+	delete from user where user_id = #{user_id}
+</delete>
+ <update id="update" parameterType="Object">  
+	update user  set user_id = #{user_id} , user_name = #{user_name} , user_password = #{user_password} , user_token = #{user_token} , user_head = #{user_head}  
+	where user_id = #{user_id}   
+</update> 
+
+	<update id="updateNotNull" parameterType="Object">
+		update User  set   <include refid="Update_Column" />
+		where user_id = #{user_id}
+	</update>
+ <sql id="Update_Column"> 
+	 user_id=#{user_id} 
+	<if test="user_name != null and user_name != ''" >
+		 , user_name =  #{user_name}
+	</if>
+	<if test="user_password != null and user_password != ''" >
+		 , user_password =  #{user_password}
+	</if>
+	<if test="user_token != null and user_token != ''" >
+		 , user_token =  #{user_token}
+	</if>
+	<if test="user_head != null and user_head != ''" >
+		 , user_head =  #{user_head}
+	</if>
+</sql>
+
+<select id="findAll" resultType="com.nys.musicsystem.domain.User">
+	 select * from user
+</select>
+
+<select id="findById" resultType="com.nys.musicsystem.domain.User">
+	 select * from user where user_id=#{user_id}
+</select>
+
+<select id="queryByList" resultType="com.nys.musicsystem.domain.User"  parameterType="Object">
+	 select SQL_CALC_FOUND_ROWS * from user
+	<include refid="Example_Where_Clause" />
+	<include refid="sortsql" />
+</select>
+<sql id="sortsql">
+	<trim >
+		<if test="sort != null">
+			order by #{sort}
+		</if>
+		<if test="order != null">
+			#{order} 
+		</if>
+		<if test="page != null and rows!=null">
+			limit #{page} ,#{rows}
+		</if>
+	</trim>
+</sql>
+ <sql id="Example_Where_Clause"> 
+	 where 1=1 
+<trim  suffixOverrides="," >
+	<if test="user_id != null and user_id != 0" >
+		 and user_id =  #{user_id}
+	</if>
+	<if test="user_name != null and user_name != ''" >
+		 and user_name =  #{user_name}
+	</if>
+	<if test="user_password != null and user_password != ''" >
+		 and user_password =  #{user_password}
+	</if>
+	<if test="user_token != null and user_token != ''" >
+		 and user_token =  #{user_token}
+	</if>
+	<if test="user_head != null and user_head != ''" >
+		 and user_head =  #{user_head}
+	</if>
+</trim>
+</sql>
+
+<select id="findObject" resultType="com.nys.musicsystem.domain.User"  parameterType="Object">
+	 select  * from user
+	<include refid="Example_Where_Clause" />
+order by user_id desc limit 0,1
+</select>
+</mapper>

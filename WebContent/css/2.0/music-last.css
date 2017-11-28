@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.music-last{
+	width: 100%;
+	height: 140px;
+	margin-top: 40px;
+	background-color: #F2F2F2;
+    border-top: 1px solid #d3d3d3;
+	overflow: hidden;
+	position: relative;
+}
+.music-last-dao{
+	float: left;
+	width: 500px;
+	padding-top: 40px;
+	padding-left: 200px;
+	line-height: 34px;
+}
+.music-last-dao p>a{
+	font-size: 15px;
+	color: #999;
+}
+.music-last-dao-span{
+	font-size: 16px;
+	color: #666;
+}

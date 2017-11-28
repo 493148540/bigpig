@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.music-first{
+	width: 100%;
+	height: 70px;
+	background-color: #242424;
+}
+.music-first-logo{
+	float: left;
+	width: 177px;
+	height: 69px;
+	padding-right: 20px;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 120px;
+}
+.music-first-logo p>a{
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+    color: #fff;
+}
+.music-first-dao li{
+	display: inline-block;
+	height: 70px;
+	padding-top: 20px;
+	line-height: 40px;
+	margin: auto 20px;
+}
+.music-first-dao li>a{
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.music-first-dao li:hover a{
+	color: red;
+} 
+
+.music-first-login{
+	float: right;
+	width: 50px;
+	padding-top: 30px;
+	padding-right: 100px;
+}
+/*.music-first-login p>a{
+	padding-top: 30px;
+	color: #FFFFFF;
+	text-decoration: none;
+}*/
+/*.music-first-login-method{
+	width: 140px;
+	height: 140px;
+	line-height: 30px;
+	background-color: #242424;
+	list-style: none;
+	padding-right: 30px;
+	padding-top: 30px;
+	float: right;
+}
+.music-first-login-method li>a{
+	padding-left: 50px;
+	text-decoration: none;
+}*/
+.music-first-login form option{
+	color: #787878;
+}
+
+
+.music-second{
+	width: 100%;
+	height: 35px;
+	background-color: #c20c0c;
+}
+.music-second-dao li{
+	display: inline-block;
+	padding-top: 10px;
+	line-height: 10px;
+	margin: auto 30px;
+}
+.music-second-dao li>a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 10px;
+}
+
+.clear:after
+{ 
+	visibility: none; /*元素不可见，隐藏后任然占据位置*/
+	content:""; 
+	display:block; 
+	clear:both;/*清除浮动*/
+	height:0; 
+}
+#wrap{ 
+    width: 800px;
+    height:335px; 
+    margin:0 auto; 
+    position:relative; 
+    background: pink; 
+    overflow: hidden;/*元素内容溢出会被修剪*/
+    
+ } 
+ .wrap-background{
+ 	width: 100%;
+ 	height: 335px;
+ 	background-color: #242424;
+ }
+ #inner{ 
+    width: 1000%;
+    height:100%; 
+    position:absolute; 
+    left:0; 
+    top:0; 
+} 
+ #inner img{
+  	width:10%; 
+  	height:100%;
+  	float: left; 
+}
+ .paganation{ 
+ 	width: 100%; 
+ 	position: absolute;
+ 	bottom:10px; 
+ 	text-align:center;
+} 
+.paganation span{ 
+	padding:5px 8px; 
+	background: #F2F2F2;
+	color:red; 
+	border-radius:50%;
+	cursor: pointer /*鼠标放置呈现一只手*/
+}
+ .paganation  .selected{ 
+ 	background: red; 
+ 	color:white; 
+}
+.arrow{ 
+ 	position:absolute; 
+ 	top:0; width: 30px;
+ 	height: 286px; 
+ 	line-height: 286px; 
+ 	text-align: center; 
+ 	color: red; 
+ 	cursor: pointer;
+} 
+#right{ 
+ 	right: 0;
+}
+.arrow:hover{ 
+ 	background: rgba(0,0,0,0.5);
+}
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nys.musicsystem.dao.MusicDao">
+ <insert id="insert" useGeneratedKeys="true" keyProperty="musicId"> 
+	 insert into music(musicId , musicMd5 , musicName , musicAuthor , musicLyric , musicKeyWards , musicImage , musicAlbum ) 
+ 	 values(#{musicId} , #{musicMd5} , #{musicName} , #{musicAuthor} , #{musicLyric} , #{musicKeyWards} , #{musicImage} , #{musicAlbum} )
+</insert>
+
+<delete id="deleteById">
+	delete from music where musicId = #{musicId}
+</delete>
+ <update id="update" parameterType="Object">  
+	update music  set musicId = #{musicId} , musicMd5 = #{musicMd5} , musicName = #{musicName} , musicAuthor = #{musicAuthor} , musicLyric = #{musicLyric} , musicKeyWards = #{musicKeyWards} , musicImage = #{musicImage} , musicAlbum = #{musicAlbum}  
+	where musicId = #{musicId}   
+</update> 
+
+	<update id="updateNotNull" parameterType="Object">
+		update Music  set   <include refid="Update_Column" />
+		where musicId = #{musicId}
+	</update>
+ <sql id="Update_Column"> 
+	 musicId=#{musicId} 
+	<if test="musicMd5 != null and musicMd5 != ''" >
+		 , musicMd5 =  #{musicMd5}
+	</if>
+	<if test="musicName != null and musicName != ''" >
+		 , musicName =  #{musicName}
+	</if>
+	<if test="musicAuthor != null and musicAuthor != ''" >
+		 , musicAuthor =  #{musicAuthor}
+	</if>
+	<if test="musicLyric != null and musicLyric != ''" >
+		 , musicLyric =  #{musicLyric}
+	</if>
+	<if test="musicKeyWards != null and musicKeyWards != ''" >
+		 , musicKeyWards =  #{musicKeyWards}
+	</if>
+	<if test="musicImage != null and musicImage != ''" >
+		 , musicImage =  #{musicImage}
+	</if>
+	<if test="musicAlbum != null and musicAlbum != ''" >
+		 , musicAlbum =  #{musicAlbum}
+	</if>
+</sql>
+
+<select id="findAll" resultType="com.nys.musicsystem.domain.Music">
+	 select * from music
+</select>
+
+<select id="findById" resultType="com.nys.musicsystem.domain.Music">
+	 select * from music where musicId=#{musicId}
+</select>
+
+<select id="queryByList" resultType="com.nys.musicsystem.domain.Music"  parameterType="Object">
+	 select SQL_CALC_FOUND_ROWS * from music
+	<include refid="Example_Where_Clause" />
+	<include refid="sortsql" />
+</select>
+<sql id="sortsql">
+	<trim >
+		<if test="sort != null">
+			order by #{sort}
+		</if>
+		<if test="order != null">
+			#{order} 
+		</if>
+		<if test="page != null and rows!=null">
+			limit #{page} ,#{rows}
+		</if>
+	</trim>
+</sql>
+ <sql id="Example_Where_Clause"> 
+	 where 1=1 
+<trim  suffixOverrides="," >
+	<if test="musicId != null and musicId != 0" >
+		 and musicId =  #{musicId}
+	</if>
+	<if test="musicMd5 != null and musicMd5 != ''" >
+		 and musicMd5 =  #{musicMd5}
+	</if>
+	<if test="musicName != null and musicName != ''" >
+		 and musicName =  #{musicName}
+	</if>
+	<if test="musicAuthor != null and musicAuthor != ''" >
+		 and musicAuthor =  #{musicAuthor}
+	</if>
+	<if test="musicLyric != null and musicLyric != ''" >
+		 and musicLyric =  #{musicLyric}
+	</if>
+	<if test="musicKeyWards != null and musicKeyWards != ''" >
+		 and musicKeyWards =  #{musicKeyWards}
+	</if>
+	<if test="musicImage != null and musicImage != ''" >
+		 and musicImage =  #{musicImage}
+	</if>
+	<if test="musicAlbum != null and musicAlbum != ''" >
+		 and musicAlbum =  #{musicAlbum}
+	</if>
+</trim>
+</sql>
+
+<select id="findObject" resultType="com.nys.musicsystem.domain.Music"  parameterType="Object">
+	 select  * from music
+	<include refid="Example_Where_Clause" />
+order by musicId desc limit 0,1
+</select>
+</mapper>

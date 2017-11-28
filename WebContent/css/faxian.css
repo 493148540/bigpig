@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+.music-first{
+	width: 100%;
+	height: 70px;
+	background-color: #242424;
+	position: relative;
+}
+.music-first-logo{
+	float: left;
+	width: 177px;
+	height: 69px;
+	padding-right: 20px;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 120px;
+}
+.music-first-logo p>a{
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+    color: #fff;
+}
+.music-first-dao li{
+	display: inline-block;
+	height: 70px;
+	padding-top: 20px;
+	line-height: 40px;
+	margin: auto 20px;
+}
+.music-first-dao li>a{
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.music-first-dao li:hover a{
+	color: red;
+} 
+
+.music-first-login{
+	float: right;
+	width: 50px;
+	padding-top: 30px;
+	padding-right: 100px;
+}
+.music-first-login form option{
+	color: #787878;
+}
+
+
+.music-second{
+	width: 100%;
+	height: 35px;
+	background-color: #c20c0c;
+}
+.music-second-dao li{
+	display: inline-block;
+	padding-top: 10px;
+	line-height: 10px;
+	margin: auto 30px;
+}
+.music-second-dao li>a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 10px;
+}
+
+
+.bg {
+    width: 100%;
+    height: 336px;
+    background-color: pink;
+    filter: blur(34px);
+    margin-top: 20px;
+}
+
+.r-box {
+    width: 800px;
+    height: 336px;
+    margin: auto;
+    position: absolute;
+    margin-top: 106px;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 20px 3px rgba(0,0,0,.4);
+}
+
+.r-box .r-img {
+    width: 550px;
+    height: 100%;
+    border-radius: 5px 5px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    background-color: #bd6ea6;
+    transition: left .3s ease-out,
+                right .3s ease-out;
+}
+
+.table-log tr th{
+	width: 200px;
+	padding: 20px 30px;
+	margin: auto;
+}
+
+.table-nei tr td{
+	width: 200px;
+	padding: 5px 150px;
+	margin: auto;
+	font-size: 10px;
+}
+
+

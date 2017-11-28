@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.music-first{
+	width: 100%;
+	height: 70px;
+	background-color: #242424;
+}
+.music-first-logo{
+	float: left;
+	width: 177px;
+	height: 69px;
+	padding-right: 20px;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 120px;
+}
+.music-first-logo p>a{
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+.music-first-dao li{
+	display: inline-block;
+	height: 70px;
+	padding-top: 20px;
+	line-height: 40px;
+	margin: auto 20px;
+	font-weight: bold;
+}
+.music-first-dao li>a{
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.music-first-dao li:hover a{
+	color: red;
+} 
+
+.music-first-login{
+	float: right;
+	width: 50px;
+	padding-top: 30px;
+	padding-right: 100px;
+}
+.music-first-login form option{
+	color: #787878;
+}
+
+.music-faxian-lan{
+	 width: 100%;
+	 height: 5px;
+	border-bottom-width: initial;
+    border-bottom-style: none;
+    border-bottom-color: initial;
+    z-index: 90;
+    box-sizing: border-box;
+    background-color: #C20C0C;
+	}
+
+.music-faxian-background{
+	width: 740px;
+	height: 300px;
+	position: relative;
+}
+.music-faxian-xinjian{
+	width: 240px;
+	height: 100%;
+	position: absolute;
+	padding-left: 140px;
+	padding-top: 40px;
+	border-right: 1px solid #666;
+}
+.music-faxian-chuangjian{
+	width: 232px;
+	height: 28px;
+}
+.music-faxian-chuangjian p>span{
+	font-size: 20px;
+	font-weight: bold;
+}
+.music-faxian-chuangjian p>input{
+	margin: auto 25px;
+}
+.music-faxian-one{
+	margin: 20px auto;
+}
+.music-faxian-one p>a{
+	text-decoration: none;
+}
+
+.music-faxian-song{
+	width: 740px;
+	height: 280px;
+	padding-top: 0;
+	margin-left: 420px;
+	position: relative;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+}
+
+.music-faxian-geren{
+	width: 660px;
+	height: 200px;
+	position: absolute;
+	padding-top: 35px;
+	padding-left: 35px;
+	display: inline-block;
+}
+.music-faxian-text{
+	width: 430px;
+	height: 122px;
+	float: right;
+}
+.music-faxian-text input{
+	color: red;
+	font-weight: bold;
+}
+.music-faxian-text span{
+	font-size: 20px;
+	margin: auto 20px;
+}
+.music-faxian-name{
+	margin: 10px 0;
+}
+.music-faxian-ul li{
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.music-faxian-liebiao{
+  text-align: center;
+  margin-left: 300px;
+}
+
+.music-faxian-tu  img{
+	margin: 100px 40px 50px 30px;
+}
+
+.laolang ,.lizhi ,.pushu, .zhaolei{
+	float: right;
+}
+
